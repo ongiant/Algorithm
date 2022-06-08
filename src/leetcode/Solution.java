@@ -1,11 +1,24 @@
 package leetcode;
 
-class Solution {
+class Solution extends A{
+
+    public int a(){
+        return super.a() + 3;
+    }
+
+    public int b(){
+        return 10;
+    }
+
+    public int c(){
+        return 100;
+    }
+
     public static void main(String[] args){
 //        int[] a = {4,2,0,3,2,4,3,4};
-        int[] a = {4,2,0,3,2,5};
-        int ans = largestRectangleArea(a);
-        System.out.println(ans);
+//        int[] a = {4,2,0,3,2,5};
+//        int ans = largestRectangleArea(a);
+        System.out.println(new Solution().a());
     }
     public static int largestRectangleArea(int[] heights) {
 
@@ -30,5 +43,20 @@ class Solution {
             ans = Math.max(ans, r);
         }
         return ans;
+    }
+
+}
+
+class A{
+    public int a() {
+        return b() + c();
+    }
+
+    public int  b() {
+        return 1;
+    }
+
+    public int c() {
+        return 2;
     }
 }
