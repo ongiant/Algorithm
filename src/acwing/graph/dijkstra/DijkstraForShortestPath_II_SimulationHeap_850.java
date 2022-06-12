@@ -95,12 +95,13 @@ public class DijkstraForShortestPath_II_SimulationHeap_850 {
     }
 
     static void heap_update(int number, int distance){
-        int index = ph[number];
+
         if(!contains(number)) {
             heap_push(number, distance);
             return;
         }
 
+        int index = ph[number];
         heap[index] = distance;
         sink(index);
         swim(index);
