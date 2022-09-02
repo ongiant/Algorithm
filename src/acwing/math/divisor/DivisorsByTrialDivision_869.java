@@ -12,7 +12,7 @@ public class DivisorsByTrialDivision_869 {
         while(n -- > 0){
             int x = sin.nextInt();
             TreeSet<Integer> result = getAllDivisors(x);
-            for(int e : result) System.out.println(e + " ");
+            for(int e : result) System.out.print(e + " ");
             System.out.println();
         }
 
