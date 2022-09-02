@@ -7,4 +7,5 @@
 # Editor-based HTTP Client requests
 /httpRequests/
 /out/
-/.idea/
+.idea
+Algorithm.iml
