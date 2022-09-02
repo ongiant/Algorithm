@@ -1,4 +1,4 @@
-package acwing.math.PrimeNumbers;
+package acwing.math.prime;
 
 import java.util.*;
 

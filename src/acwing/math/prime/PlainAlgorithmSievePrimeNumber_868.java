@@ -1,8 +1,8 @@
-package acwing.math.PrimeNumbers;
+package acwing.math.prime;
 
-import java.util.Scanner;
+import java.util.*;
 
-public class EratosthenesSievePrimeNumber_868 {
+public class PlainAlgorithmSievePrimeNumber_868 {
 
     static final int N = 1000010;
     static int cnt;
@@ -25,10 +25,8 @@ public class EratosthenesSievePrimeNumber_868 {
 
     static void plainSieve(int n){
         for(int i = 2; i <= n; i ++){
-            if(!st[i]) {
-                primes[cnt ++] = i;
-                for(int j = i + i; j <= n; j += i) st[j] = true;
-            }
+            if(!st[i]) primes[cnt ++] = i;
+            for(int j = i + i; j <= n; j += i) st[j] = true;
         }
     }
 }
