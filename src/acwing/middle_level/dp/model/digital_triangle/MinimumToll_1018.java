@@ -1,4 +1,4 @@
-package acwing.middle_level.dp;
+package acwing.middle_level.dp.model.digital_triangle;
 import java.util.Scanner;
 import java.io.BufferedInputStream;
 
