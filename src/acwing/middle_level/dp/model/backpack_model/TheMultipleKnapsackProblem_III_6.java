@@ -1,11 +1,11 @@
 package acwing.middle_level.dp.model.backpack_model;
 import java.util.Scanner;
 import java.io.BufferedInputStream;
-import java.util.Arrays;
 
 public class TheMultipleKnapsackProblem_III_6 {
 
-    static final int M = 20010, INF = 0x3f3f3f3f;
+//    static final int INF = 0x3f3f3f3f;
+    static final int M = 20010;
     static int n, m;
     static int v, w, s;
     static int[] f, q;
@@ -20,9 +20,10 @@ public class TheMultipleKnapsackProblem_III_6 {
         n = sin.nextInt();
         m = sin.nextInt();
 
-        Arrays.fill(f, -INF);
-        f[0] = 0;
-        for(int i = 0; i < n; i ++){
+//        Arrays.fill(f, -INF);
+//        f[0] = 0;
+        // 不用初始化，因为对于前0种物品，任意背包体积所能获得的最大价值就是0
+        for(int i = 1; i <= n; i ++){
             v = sin.nextInt();
             w = sin.nextInt();
             s = sin.nextInt();
@@ -44,11 +45,12 @@ public class TheMultipleKnapsackProblem_III_6 {
                 }
             }
         }
-        long ans = 0;
-        for(int i = 1; i <= m; i ++) {
-            ans = Math.max(ans, f[i]);
-        }
-        System.out.println(ans);
+//        long ans = 0;
+//        for(int i = 1; i <= m; i ++) {
+//            ans = Math.max(ans, f[i]);
+//        }
+//        System.out.println(ans);
+        System.out.println(f[m]);
 
         sin.close();
     }
