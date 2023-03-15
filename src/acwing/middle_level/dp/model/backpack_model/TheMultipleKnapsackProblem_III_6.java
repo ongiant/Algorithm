@@ -4,7 +4,6 @@ import java.io.BufferedInputStream;
 
 public class TheMultipleKnapsackProblem_III_6 {
 
-//    static final int INF = 0x3f3f3f3f;
     static final int M = 20010;
     static int n, m;
     static int v, w, s;
@@ -20,8 +19,6 @@ public class TheMultipleKnapsackProblem_III_6 {
         n = sin.nextInt();
         m = sin.nextInt();
 
-//        Arrays.fill(f, -INF);
-//        f[0] = 0;
         // 不用初始化，因为对于前0种物品，任意背包体积所能获得的最大价值就是0
         for(int i = 1; i <= n; i ++){
             v = sin.nextInt();
@@ -45,11 +42,7 @@ public class TheMultipleKnapsackProblem_III_6 {
                 }
             }
         }
-//        long ans = 0;
-//        for(int i = 1; i <= m; i ++) {
-//            ans = Math.max(ans, f[i]);
-//        }
-//        System.out.println(ans);
+
         System.out.println(f[m]);
 
         sin.close();
