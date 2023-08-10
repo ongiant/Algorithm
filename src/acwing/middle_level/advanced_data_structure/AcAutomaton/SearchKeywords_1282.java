@@ -36,10 +36,7 @@ public class SearchKeywords_1282 {
             int ans = 0;
             for(int i = 0, j = 0; i < str.length(); i++){
                 int x = str.charAt(i) - 'a';
-                while(j != 0 && tr[j][x] == 0) {
-                    j = ne[j];
-                }
-                if(tr[j][x] != 0) j = tr[j][x];
+                j = tr[j][x];
 
                 int p = j;
                 while(p != 0){
@@ -68,17 +65,13 @@ public class SearchKeywords_1282 {
             int x = q[hh++];
             for(int i = 0; i < 26; i ++){
                 int y = tr[x][i];
-                if(y == 0) continue;
-
-                int z = ne[x];
-                while(z != 0 && tr[z][i] == 0){
-                    z = ne[z];
+                if(y == 0) {
+                    tr[x][i] = tr[ne[x]][i];
                 }
-
-                if(tr[z][i] != 0) z = tr[z][i];
-                ne[y] = z;
-
-                q[++tt] = y;
+                else{
+                    ne[y] = tr[ne[x]][i];
+                    q[++tt] = y;
+                }
             }
         }
     }
