@@ -5,7 +5,7 @@ import java.io.InputStreamReader;
 import java.util.Arrays;
 public class SearchKeywords_1282 {
 
-    static final int N = 100 * 100 + 10, L = 55, M = 1000 * 1000 + 10;
+    static final int N = 100 * 100 + 10, L = 55;
     static int[] tr[], cnt, ne, q;
     static int idx, hh, tt;
 
