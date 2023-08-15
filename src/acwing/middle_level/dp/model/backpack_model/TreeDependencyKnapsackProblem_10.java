@@ -45,7 +45,7 @@ public class TreeDependencyKnapsackProblem_10 {
     }
 
     static void dfs(int root, int vsum){
-
+        if(vsum > m) return;
         for(int i = h[root]; i != -1; i = ne[i]) {
             int son = e[i];
             for(int j = vsum + v[son]; j <= m; j++){
