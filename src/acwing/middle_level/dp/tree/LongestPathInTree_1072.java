@@ -5,14 +5,14 @@ import java.util.Arrays;
 
 public class LongestPathInTree_1072 {
 
-    static final int N = 10010 << 1, INF = 0x3f3f3f3f;
+    static final int N = 10010, M = N << 1, INF = 0x3f3f3f3f;
     static int n, idx, ans;
     static int[] h, e, w, ne;
     static{
         h = new int[N];
-        e = new int[N];
-        w = new int[N];
-        ne = new int[N];
+        e = new int[M];
+        w = new int[M];
+        ne = new int[M];
 
         ans = -INF;
         Arrays.fill(h, -1);
