@@ -48,12 +48,13 @@ public class TaskArrangement_III_302 {
             f[i] = f[j] + s * (long) (c[n] - c[j]) + t[i] * (long) (c[i] - c[j]);
 
             while(hh < tt){
-                if((double) (f[q[tt]] - f[q[tt - 1]]) * (c[i] - c[q[tt]]) < (double) (f[i] - f[q[tt]]) * (c[q[tt]] - c[q[tt - 1]])) break;
+                BigInteger x = BigInteger.valueOf(f[q[tt]] - f[q[tt - 1]]).multiply(BigInteger.valueOf(c[i] - c[q[tt]]));
+                BigInteger y = BigInteger.valueOf(f[i] - f[q[tt]]).multiply(BigInteger.valueOf(c[q[tt]] - c[q[tt - 1]]));
+                if(x.compareTo(y) < 0) break;
                 tt --;
             }
             q[++tt] = i;
         }
-
         System.out.println(f[n]);
 
         sin.close();
